@@ -6,7 +6,8 @@
     "build": "next build",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "dev": "WATCHPACK_POLLING=true next dev",
+    "dev:container": "WATCHPACK_POLLING=true next dev",
+    "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start"

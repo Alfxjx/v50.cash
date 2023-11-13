@@ -3,7 +3,21 @@
 {
 	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye"
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+	"containerEnv": {
+		"HTTP_PROXY": "http://127.0.0.1:7890",
+        "HTTPS_PROXY": "https://127.0.0.1:7890"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"Prisma.prisma",
+				"bradlc.vscode-tailwindcss",
+				"mhutchie.git-graph"
+			]
+		}
+	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

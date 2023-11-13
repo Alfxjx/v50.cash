@@ -12,12 +12,12 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
         <div className="flex flex-col items-center gap-2">
-          <p className="text-2xl text-white">
+          <p className="text-2xl">
             {hello ? hello.greeting : "Loading tRPC query..."}
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4">
-            <p className="text-center text-2xl text-white">
+            <p className="text-center text-2xl">
               {session && <span>Logged in as {session.user?.name}</span>}
             </p>
             <Link

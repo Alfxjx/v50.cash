@@ -27,6 +27,19 @@ model Post {
     @@index([name])
 }
 
+model Qrcode_Item {
+    id       Int      @id @default(autoincrement())
+    name     String
+    qrcode   String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    createdBy   User   @relation(fields: [createdById], references: [id])
+    createdById String
+
+    @@index([name])
+}
+
 // Necessary for Next auth
 model Account {
     id                       String  @id @default(cuid())
@@ -63,6 +76,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    qrCodeItems   Qrcode_Item[]
     posts         Post[]
 }
 
